@@ -5,19 +5,25 @@ src = $(wildcard *.cpp)
 obj = $(patsubst %cpp,%o,$(src))
 #默认情况下只会执行第一个，但是会先找依赖
 hello.out:$(obj)
-	gcc $(obj) -o hello.out
+	gcc $^ -o $@
+#模式规则
+%o:%cpp
+	gcc -c $< -o %@
 
-div.o:div.cpp
-	gcc -c div.cpp -o div.o
+# 
+# div.o:div.cpp
+# 	gcc -c $< -o $@
 
-sub.o:sub.cpp
-	gcc -c sub.cpp -o sub.o
+# sub.o:sub.cpp
+# 	gcc -c $<  -o $@
 
-add.o:add.cpp
-	gcc -c add.cpp -o add.o
+# add.o:add.cpp
+# 	gcc -c $<  -o $@
 
-hello.o:hello.cpp
-	gcc -c hello.cpp -o hello.o
+# hello.o:hello.cpp
+# 	gcc -c $<  -o $@
+# 
+
 
 
 
