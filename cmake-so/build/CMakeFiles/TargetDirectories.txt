@@ -1,0 +1,3 @@
+/Users/mayisheng/mayisheng/Makefile/cmake-so/build/CMakeFiles/rebuild_cache.dir
+/Users/mayisheng/mayisheng/Makefile/cmake-so/build/CMakeFiles/edit_cache.dir
+/Users/mayisheng/mayisheng/Makefile/cmake-so/build/CMakeFiles/math.dir
