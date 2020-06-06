@@ -1,10 +1,11 @@
 #a.out:a.c
 #	gcc a.c -o a.out
 
-
+src = $(wildcard *.cpp)
+obj = $(patsubst %cpp,%o,$(src))
 #默认情况下只会执行第一个，但是会先找依赖
-hello.out:hello.o sub.o div.o add.o
-	gcc hello.o sub.o div.o add.o -o hello.out
+hello.out:$(obj)
+	gcc $(obj) -o hello.out
 
 div.o:div.cpp
 	gcc -c div.cpp -o div.o
@@ -17,3 +18,8 @@ add.o:add.cpp
 
 hello.o:hello.cpp
 	gcc -c hello.cpp -o hello.o
+
+
+
+
+
