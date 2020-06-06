@@ -20,7 +20,7 @@ FILE(GLOB SRC_LIST_C "${PROJECT_SOURCE_DIR}/src/*.c")
 #指定头文件的目录
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
 
-#指定 so 生成的目录
+#指定 so 
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 

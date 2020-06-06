@@ -80,15 +80,15 @@ include CMakeFiles/hello.out.dir/flags.make
 CMakeFiles/hello.out.dir/hello.cpp.o: CMakeFiles/hello.out.dir/flags.make
 CMakeFiles/hello.out.dir/hello.cpp.o: ../hello.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mayisheng/mayisheng/Makefile/cmake-hello/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hello.out.dir/hello.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello.out.dir/hello.cpp.o -c /Users/mayisheng/mayisheng/Makefile/cmake-hello/hello.cpp
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello.out.dir/hello.cpp.o -c /Users/mayisheng/mayisheng/Makefile/cmake-hello/hello.cpp
 
 CMakeFiles/hello.out.dir/hello.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.out.dir/hello.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mayisheng/mayisheng/Makefile/cmake-hello/hello.cpp > CMakeFiles/hello.out.dir/hello.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mayisheng/mayisheng/Makefile/cmake-hello/hello.cpp > CMakeFiles/hello.out.dir/hello.cpp.i
 
 CMakeFiles/hello.out.dir/hello.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.out.dir/hello.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mayisheng/mayisheng/Makefile/cmake-hello/hello.cpp -o CMakeFiles/hello.out.dir/hello.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mayisheng/mayisheng/Makefile/cmake-hello/hello.cpp -o CMakeFiles/hello.out.dir/hello.cpp.s
 
 # Object files for target hello.out
 hello_out_OBJECTS = \
