@@ -17,3 +17,10 @@ gcc -c sub.cpp -o sub.o
 gcc -c hello.cpp -o hello.o
 
 ```
+
+修改一个文件 add，重新编译 .o 在生成可执行文件
+```
+gcc -c add.cpp -o add.o
+gcc hello.o div.o sub.o add.o -o hello  (没有 -c)
+
+```
