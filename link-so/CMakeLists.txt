@@ -10,5 +10,7 @@ LINK_DIRECTORIES(${PROJECT_SOURCE_DIR}/lib)
 
 ADD_EXECUTABLE(hello hello.cpp)
 
+
+#为 hello 添加编译连接库
 TARGET_LINK_LIBRARIES(hello math)
 

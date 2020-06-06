@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/mayisheng/mayisheng/Makefile/cmake-hello/build",
+  "command": "/usr/bin/clang++    -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk   -o CMakeFiles/hello.out.dir/hello.cpp.o -c /Users/mayisheng/mayisheng/Makefile/cmake-hello/hello.cpp",
+  "file": "/Users/mayisheng/mayisheng/Makefile/cmake-hello/hello.cpp"
+}
+]

@@ -57,9 +57,60 @@ $<:表示规则中的第一个依赖条件，如果运行在模式套用中，�
 
 
 ### Cmake 
-编写 CmakeLists.txt 创建一个 build 文件夹在 build 文件夹内执行 cmake .. 命令
+编写 CmakeLists.txt 创建一个 build 文件夹在 build 文件夹内执行 cmake .. 命令 ,然后在 build 目录中执行 make 命令
 
 #### 构建生成.so 动态库
+#指定CMake 的最低编译版本
+CMAKE_MINIMUM_REQUIRED(VERSION 3.17.3)
+
+
+
+#mac 的 Cmake 默认是生成 dylib 
+#linux 的 Cmake 默认是生成 so
+#在mac 下指定 cmake 为 ndk 的 cmake 即可生成so
+set(CMAKE_ANDROID_NDK /Users/xxx/ndk/android-ndk-r18b/)
+set(CMAKE_TOOLCHAIN_FILE /Users/xxx/ndk/android-ndk-r18b/build/cmake/android.toolchain.cmake)
+
+PROJECT(MATH)
+
+
+#搜集 src 目录下的所有 .cpp 文件（源文件）
+#搜集 src 目录下的所有 .c 文件（源文件）
+FILE(GLOB SRC_LIST_CPP "${PROJECT_SOURCE_DIR}/src/*.cpp")
+FILE(GLOB SRC_LIST_C "${PROJECT_SOURCE_DIR}/src/*.c")
+
+#指定头文件的目录
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
+
+#指定 so 
+SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+
+
+#静态库 STATIC .a 
+#动态库 SHARED .so / .bylib 
+#### 链接外部头文件和动态库
+CMAKE_MINIMUM_REQUIRED(VERSION 3.17.3)
+PROJECT(HELLO)
+
+#指定头文件在哪个几个目录
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
+
+#指定 so 在哪个目录
+LINK_DIRECTORIES(${PROJECT_SOURCE_DIR}/lib)
+
+
+ADD_EXECUTABLE(hello hello.cpp)
+
+
+#为 hello 添加编译连接库
+TARGET_LINK_LIBRARIES(hello math)
+
+##### 生成多个 so
+在不同的内部编写一个 CMakeLists.txt,比如 libavformat libacutil 有自己的 CMakeLists.txt
+
+然后在最外部写一个 CMakeLists.txt 添加
+add_subdirectory()
+
 
 
 
