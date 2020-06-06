@@ -24,3 +24,17 @@ gcc -c add.cpp -o add.o
 gcc hello.o div.o sub.o add.o -o hello  (没有 -c)
 
 ```
+### Makefile 编写
+
+#### 一个规则
+生成的目标：需要依赖的条件
+（一个tab空格）命令
+
+```
+a.out:a.c
+	gcc a.c -o a.out
+```
+#### 两个函数
+#### 三个自动变量
+
+
