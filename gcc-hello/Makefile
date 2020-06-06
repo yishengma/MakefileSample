@@ -1,2 +1,19 @@
-a.out:a.c
-	gcc a.c -o a.out
+#a.out:a.c
+#	gcc a.c -o a.out
+
+
+#默认情况下只会执行第一个，但是会先找依赖
+hello.out:hello.o sub.o div.o add.o
+	gcc hello.o sub.o div.o add.o -o hello.out
+
+div.o:div.cpp
+	gcc -c div.cpp -o div.o
+
+sub.o:sub.cpp
+	gcc -c sub.cpp -o sub.o
+
+add.o:add.cpp
+	gcc -c add.cpp -o add.o
+
+hello.o:hello.cpp
+	gcc -c hello.cpp -o hello.o
