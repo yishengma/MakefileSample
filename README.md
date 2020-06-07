@@ -111,6 +111,6 @@ TARGET_LINK_LIBRARIES(hello math)
 然后在最外部写一个 CMakeLists.txt 添加
 add_subdirectory()
 
-
-
-
+#### 交叉编译
+交叉编译：在一个系统上编译另一个系统的 so
+NDK 16 的版本自带 Cmake 的交叉编译链

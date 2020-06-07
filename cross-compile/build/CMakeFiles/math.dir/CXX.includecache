@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/hhmath.h
+
+/Users/mayisheng/mayisheng/Makefile/cross-compile/src/hello.cpp
+hhmath.h
+/Users/mayisheng/mayisheng/Makefile/cross-compile/src/hhmath.h
+stdio.h
+-
+
+/Users/mayisheng/mayisheng/ndk/android-ndk-r18b/sources/cxx-stl/llvm-libc++/include/__config
+features.h
+-
+sys/endian.h
+-
+sys/endian.h
+-
+winapifamily.h
+-
+sys/isa_defs.h
+-
+endian.h
+-
+
+/Users/mayisheng/mayisheng/ndk/android-ndk-r18b/sources/cxx-stl/llvm-libc++/include/stdio.h
+__config
+-
+
